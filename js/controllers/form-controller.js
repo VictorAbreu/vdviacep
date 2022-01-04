@@ -26,6 +26,7 @@ export function init(){
     state.btnClear = document.forms.newAddress.btnClear;
 
     state.inputNumber.addEventListener('change', handleInputNumberChange);
+    state.btnClear.addEventListener('click', handleBtnCleanClick);
 }
 
 function handleInputNumberChange(event){
@@ -34,6 +35,21 @@ function handleInputNumberChange(event){
     }else{
         setFormError("numero", "");
     }
+}
+
+function handleBtnCleanClick(event){
+    event.preventDefault();
+    clearForm();
+}
+
+function clearForm(){
+    state.inputCep.value = "";
+    state.inputStreet.value = "";
+    state.inputNumber.value = "";
+    state.inputCity.value = "";
+    setFormError("cep", "");
+    setFormError("numero", "");
+    state.inputCep.focus();
 }
 
 function setFormError(key, value){
