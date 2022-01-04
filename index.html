@@ -25,7 +25,7 @@
     <main>
       <section id="form-section" class="form-container">
         <div class="card-form">
-          <form action="newAdress">
+          <form name="newAddress">
             <div class="form-control">
               <label for="cep"></label>
               <input
@@ -35,7 +35,7 @@
                 class="form-input"
                 placeholder="CEP"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-error="cep">Campo requerido</div>
             </div>
             <div class="form-control">
               <label for="logradouro"></label>
@@ -57,7 +57,7 @@
                 class="form-input"
                 placeholder="Número"
               />
-              <div class="error-message">Campo requerido</div>
+              <div class="error-message" data-error="numero">Campo requerido</div>
             </div>
             <div class="form-control">
               <label for="cidade"></label>
@@ -72,8 +72,8 @@
             </div>
 
             <div class="btn-container">
-              <button class="btn btn-left" type="submit">Salvar</button>
-              <button class="btn btn-right">Limpar</button>
+              <button name="btnSave" class="btn btn-left" type="submit">Salvar</button>
+              <button name="btnClear" class="btn btn-right">Limpar</button>
             </div>
           </form>
         </div>
@@ -94,5 +94,6 @@
           </div>
       </section>
     </main>
+    <script type="module" src="js/vdviacep.js"></script>
   </body>
 </html>
