@@ -1,4 +1,4 @@
-import * as requestService from './services/request-service.js';
+import * as requestService from '../services/request-service.js';
 import Address from '../models/address.js';
 
 export async function findByCep(cep){
@@ -8,3 +8,4 @@ export async function findByCep(cep){
 
     return address;
 }
+

@@ -1,4 +1,4 @@
-import RequestException from "./exceptions/request-exception.js";
+import RequestException from './exceptions/request-exception.js';
 
 export async function getJson(url){
     try{
