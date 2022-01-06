@@ -7,10 +7,10 @@ const state = new State();
 
 export function init(){
     state.container = document.querySelector("#modal-contact");
-    state.container = document.querySelector("#modal-contact-close");
+    state.btnClose = document.querySelector("#modal-contact-close");
 
     state.btnClose.addEventListener('click', handleBtnCloseClick);
-    state.btnClose.addEventListener('click', handleContainerClick);
+    state.container.addEventListener('click', handleContainerClick);
 }
 
 export function showModal(){
